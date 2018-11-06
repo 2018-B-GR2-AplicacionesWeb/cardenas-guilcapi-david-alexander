@@ -73,7 +73,7 @@ function ejercicio(arregloStrings,
         fs.writeFile(nombreArchivo, contenidoArchivo, (err)=>{
             const respuesta = {
                 nombreArchivo:nombreArchivo,
-                contenidoArchivo:'contenidoArchivo',
+                contenidoArchivo:contenidoArchivo,
                 error:err
 
             };
