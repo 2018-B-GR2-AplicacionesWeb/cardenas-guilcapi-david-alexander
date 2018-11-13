@@ -2,6 +2,7 @@ const rxjs = require('rxjs');
 const map = require('rxjs/operators').map;
 const distinct = require('rxjs/operators').distinct;
 const concat = require('rxjs/operators').concat;
+
 const numeros$ = rxjs.of(1, true, 1, 4, 5, 6);
 console.log(numeros$);
 numeros$
