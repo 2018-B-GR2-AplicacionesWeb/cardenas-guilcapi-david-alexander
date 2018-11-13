@@ -1,6 +1,6 @@
 
 const fs = require ('fs');
-/*
+
 const promesa = (nombreArchivo) =>{
     return new Promise(
     (resolve, reject) => {
@@ -109,7 +109,7 @@ appendFile('09-texto.txt', 'nuevoContenido' )
             console.log('Catch',error);
         }
     );
-*/
+
 const ejercicio = (arreglo) =>{
     const arregloRespuestas = [];
     return new Promise ((resolve, reject )=>{
