@@ -1,5 +1,8 @@
+export const a = 'a';
+export let b = 'b';
+var c = 'c';
+export function f() {
 
-const a = 'a'
-let b  = 'b'
-var c = 'c'
-
+}
+export class Usuario{}
+export interface UsuarioInterface{}
