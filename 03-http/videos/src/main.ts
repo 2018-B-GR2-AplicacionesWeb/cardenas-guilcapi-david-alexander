@@ -1,3 +1,5 @@
+
+// const NestFactory = require('@nestjs/core').NestFactory; //js
 import {NestFactory} from '@nestjs/core'; // ts
 // import * as httpserver from 'http-server'; // js
 import {Options} from 'http-server'; // js
@@ -9,7 +11,8 @@ async function bootstrap() {
     //console.log(a)
     const app = await NestFactory.create(AppModule);
 
-    app.set('view engine', 'ejs')
+    app.set('view engine', 'ejs');
+
     await app.listen(3000);
 }
 
@@ -23,3 +26,4 @@ bootstrap();
 //         return [1,2,3,4,5]
 //     }
 // )
+
