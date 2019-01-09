@@ -1,4 +1,3 @@
-
 // const NestFactory = require('@nestjs/core').NestFactory; //js
 import {NestFactory} from '@nestjs/core'; // ts
 // import * as httpserver from 'http-server'; // js
@@ -6,12 +5,22 @@ import {Options} from 'http-server'; // js
 import {AppModule} from './app.module';
 //import {} from './mi-codigo';
 //const a = require('./mi-codigo').a;
+// const session = require('express-session')
+import * as session from 'express-session';
 
 async function bootstrap() {
     //console.log(a)
     const app = await NestFactory.create(AppModule);
-
     app.set('view engine', 'ejs');
+
+    app.use(
+        session({
+            secret: 'No sera de tomar un traguito',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {secure: true}
+        })
+    );
 
     await app.listen(3000);
 }
