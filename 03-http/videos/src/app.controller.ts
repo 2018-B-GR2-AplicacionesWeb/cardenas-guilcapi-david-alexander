@@ -91,14 +91,18 @@ export class AppController {
     async loginMetodo(
         @Body('username') username: string,
         @Body('password') password: string,
-        
+        @Res() response,
+        @Session() sesion
     ) {
         const identificado = await this._usuarioService
             .login(username, password);
 
         if (identificado) {
 
-            return 'ok';
+            sesion.usuario = username;
+
+            response.redirect('/saludar')
+
         } else {
             throw new BadRequestException({mensaje: 'Error login'})
         }
@@ -110,6 +114,19 @@ export class AppController {
         @Res() response
     ) {
         response.render('login');
+    }
+
+
+
+    @Get('logout')
+    logout(
+        @Res() response,
+        @Session() sesion,
+    ) {
+        sesion.usuario = undefined;
+        sesion.destroy();
+        response.redirect('/login');
+
     }
 
 
