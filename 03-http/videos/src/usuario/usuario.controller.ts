@@ -1,4 +1,3 @@
-// usuario.controller.ts
 import {Body, Controller, Get, Param, Post, Query, Res} from "@nestjs/common";
 import {Usuario, UsuarioService} from "./usuario.service";
 import {UsuarioEntity} from "./usuario-entity";
@@ -23,16 +22,20 @@ export class UsuarioController {
 
 
         let mensaje; // undefined
+        let clase; // undefined
 
         if (accion && nombre) {
             switch (accion) {
                 case 'actualizar':
+                    clase = 'info';
                     mensaje = `Registro ${nombre} actualizado`;
                     break;
                 case 'borrar':
+                    clase = 'danger';
                     mensaje = `Registro ${nombre} eliminado`;
                     break;
                 case 'crear':
+                    clase = 'success';
                     mensaje = `Registro ${nombre} creado`;
                     break;
             }
@@ -59,7 +62,8 @@ export class UsuarioController {
         response.render('inicio', {
             nombre: 'Adrian',
             arreglo: usuarios,
-            mensaje: mensaje
+            mensaje: mensaje,
+            accion: clase
         });
     }
 
@@ -134,15 +138,4 @@ export class UsuarioController {
         response.redirect('/Usuario/inicio' + parametrosConsulta)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
