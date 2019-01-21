@@ -1,0 +1,35 @@
+.btn-espaciado {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quitar-decoracion:hover {
+    text-decoration: none;
+}
+
+.btn-buscar {
+    margin-top: 31px;
+    background-color: #fd7e14;
+   color: white;
+    border-color: #fd7e14;
+
+}
+
+.animated {
+    animation-duration: 2s;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #d36201;
+    border-radius: 6px;
+    border: 2px solid #d36201;
+}
+.boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
