@@ -25,16 +25,19 @@
     "@nestjs/typeorm": "^5.2.2",
     "@types/express-session": "^1.15.11",
     "@types/http-server": "^0.10.0",
+    "class-validator": "^0.9.1",
     "ejs": "^2.6.1",
     "express-session": "^1.15.6",
     "expressjs": "^1.0.1",
     "http-server": "^0.11.1",
-    "mysql": "github:mysqljs/mysql",
+    "mysql": "^2.16.0",
+    "popper.js": "^1.14.6",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
     "session-file-store": "^1.2.0",
-    "typeorm": "^0.2.11"
+    "typeorm": "^0.2.11",
+    "typescript": "^3.0.1"
   },
   "devDependencies": {
     "@nestjs/testing": "^5.1.0",
@@ -50,8 +53,7 @@
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.5.0",
-    "tslint": "5.11.0",
-    "typescript": "^3.2.2"
+    "tslint": "5.11.0"
   },
   "jest": {
     "moduleFileExtensions": [

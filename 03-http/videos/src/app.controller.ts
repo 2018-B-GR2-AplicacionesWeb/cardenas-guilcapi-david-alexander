@@ -116,8 +116,6 @@ export class AppController {
         response.render('login');
     }
 
-
-
     @Get('logout')
     logout(
         @Res() response,

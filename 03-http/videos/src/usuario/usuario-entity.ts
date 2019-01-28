@@ -25,10 +25,14 @@ export class UsuarioEntity {
     })
     biografia: string;
 
-    @Column()
+    @Column({
+        nullable: true
+    })
     username: string;
 
-    @Column()
+    @Column({
+        nullable: true
+    })
     password: string;
 
     @BeforeInsert()
@@ -43,7 +47,7 @@ export class UsuarioEntity {
 
     @OneToMany(
         type => LibroEntity, // Tipo de Dato Un Usuario a muchos
-                             // Libros[]
+        // Libros[]
         libro => libro.usuario // Cual es el campo FK
     )
     libros: LibroEntity[];

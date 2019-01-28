@@ -8,13 +8,17 @@
 }
 
 .btn-buscar {
-    margin-top: 31px;
+
     background-color: #fd7e14;
    color: white;
     border-color: #fd7e14;
 
 }
-
+.btn-buscar:hover, .btn-buscar:focus, .btn-buscar:active, .btn-buscar.active, .open>.dropdown-toggle.btn-buscar {
+    color: white;
+    background-color: #e06700;
+    border-color: #e06700; /*set the color you want here*/
+}
 .animated {
     animation-duration: 2s;
 }
